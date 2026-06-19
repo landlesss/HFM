@@ -23,25 +23,26 @@ export default function Features() {
       <div className={styles.inner}>
         <h2 className={styles.title}>{t.features.title}</h2>
         <div className={styles.titleLine} />
+
         <div className={styles.grid}>
           <div className={styles.col}>
-            {leftFeatures.map((f, i) => (
-              <div key={i} className={styles.featureItem}>
-                <img src={f.icon} alt="" className={styles.icon} />
-                <p className={styles.featureText}>{f.text}</p>
+            {leftFeatures.map((feature, index) => (
+              <div key={index} className={styles.featureItem}>
+                <img src={feature.icon} alt="" className={styles.icon} />
+                <p className={styles.featureText}>{feature.text}</p>
               </div>
             ))}
           </div>
 
           <div className={styles.phoneCol}>
-            <img src={phoneSrc} alt="App" className={styles.phoneImg} />
+            <img src={phoneSrc} alt="Mobile App" className={styles.phoneImg} />
           </div>
 
           <div className={styles.col}>
-            {rightFeatures.map((f, i) => (
-              <div key={i} className={styles.featureItem}>
-                <img src={f.icon} alt="" className={styles.icon} />
-                <p className={styles.featureText}>{f.text}</p>
+            {rightFeatures.map((feature, index) => (
+              <div key={index} className={styles.featureItem}>
+                <img src={feature.icon} alt="" className={styles.icon} />
+                <p className={styles.featureText}>{feature.text}</p>
               </div>
             ))}
           </div>

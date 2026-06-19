@@ -6,14 +6,14 @@ import { useLang } from '../../context/LanguageContext'
 import styles from './Hero.module.css'
 
 const COUNTRIES = [
-  { name: 'Cyprus', code: '+357' },
-  { name: 'United Kingdom', code: '+44' },
-  { name: 'Germany', code: '+49' },
-  { name: 'United States', code: '+1' },
-  { name: 'France', code: '+33' },
+  { name: 'Cyprus',               code: '+357' },
+  { name: 'United Kingdom',       code: '+44'  },
+  { name: 'Germany',              code: '+49'  },
+  { name: 'United States',        code: '+1'   },
+  { name: 'France',               code: '+33'  },
   { name: 'United Arab Emirates', code: '+971' },
-  { name: 'Australia', code: '+61' },
-  { name: 'Russia', code: '+7' },
+  { name: 'Australia',            code: '+61'  },
+  { name: 'Russia',               code: '+7'   },
 ]
 
 const EXPERIENCE_OPTIONS = [
@@ -24,9 +24,9 @@ const EXPERIENCE_OPTIONS = [
 ]
 
 const schema = yup.object({
-  firstName: yup.string().required('First name is required').min(2, 'Min 2 characters'),
-  lastName: yup.string().required('Last name is required').min(2, 'Min 2 characters'),
-  country: yup.string().required('Country is required'),
+  firstName:  yup.string().required('First name is required').min(2, 'Min 2 characters'),
+  lastName:   yup.string().required('Last name is required').min(2, 'Min 2 characters'),
+  country:    yup.string().required('Country is required'),
   phone: yup.string()
     .required('Phone is required')
     .matches(/^[0-9\s\-]+$/, 'Invalid phone number'),
@@ -43,6 +43,7 @@ const schema = yup.object({
 export default function HeroForm() {
   const [phoneCode, setPhoneCode] = useState('')
   const [submitted, setSubmitted] = useState(false)
+
   const { t } = useLang()
 
   const {
@@ -83,6 +84,7 @@ export default function HeroForm() {
           />
           {errors.firstName && <span className={styles.error}>{errors.firstName.message}</span>}
         </div>
+
         <div className={styles.field}>
           <input
             className={`${styles.input} ${errors.lastName ? styles.inputError : ''}`}
@@ -108,6 +110,7 @@ export default function HeroForm() {
           </select>
           {errors.country && <span className={styles.error}>{errors.country.message}</span>}
         </div>
+
         <div className={styles.codePhoneRow}>
           <div className={styles.codeField}>
             <input
@@ -140,6 +143,7 @@ export default function HeroForm() {
           />
           {errors.email && <span className={styles.error}>{errors.email.message}</span>}
         </div>
+
         <div className={styles.field}>
           <select
             className={`${styles.input} ${styles.select} ${errors.experience ? styles.inputError : ''}`}
@@ -160,21 +164,35 @@ export default function HeroForm() {
           <input type="checkbox" {...register('agreeTerms')} />
           <span>
             {t.hero.agreeText}{' '}
-            <a href="https://docs.google.com/document/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgVE2upms" target="_blank" rel="noopener noreferrer" className={styles.link}>{t.hero.privacy}</a>
+            <a
+              href="https://docs.google.com/document/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgVE2upms"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.link}
+            >
+              {t.hero.privacy}
+            </a>
             {' '}{t.hero.and}{' '}
-            <a href="https://docs.google.com/document/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgVE2upms" target="_blank" rel="noopener noreferrer" className={styles.link}>{t.hero.terms}</a>
+            <a
+              href="https://docs.google.com/document/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgVE2upms"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.link}
+            >
+              {t.hero.terms}
+            </a>
           </span>
         </label>
         {errors.agreeTerms && <span className={styles.error}>{errors.agreeTerms.message}</span>}
       </div>
 
       {submitted && (
-        <div className={styles.successMsg}>
-          {t.hero.success}
-        </div>
+        <div className={styles.successMsg}>{t.hero.success}</div>
       )}
 
-      <button type="submit" className={styles.submitBtn}>{t.hero.joinNow}</button>
+      <button type="submit" className={styles.submitBtn}>
+        {t.hero.joinNow}
+      </button>
     </form>
   )
 }

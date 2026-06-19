@@ -22,30 +22,43 @@ const faqs = [
 ]
 
 export default function FAQ() {
-  const [open, setOpen] = useState(0)
+  const [openIndex, setOpenIndex] = useState(0) 
   const { t } = useLang()
+
+  const toggleFAQ = (index) => {
+    setOpenIndex(openIndex === index ? null : index)
+  }
 
   return (
     <section className={styles.section}>
       <div className={styles.inner}>
         <h2 className={styles.title}>{t.faq.title}</h2>
+        
         <div className={styles.list}>
-          {faqs.map((faq, i) => (
-            <div key={i} className={`${styles.item} ${open === i ? styles.itemOpen : ''}`}>
+          {faqs.map((faq, index) => (
+            <div 
+              key={index} 
+              className={`${styles.item} ${openIndex === index ? styles.itemOpen : ''}`}
+            >
               <button
                 className={styles.question}
-                onClick={() => setOpen(open === i ? null : i)}
-                aria-expanded={open === i}
+                onClick={() => toggleFAQ(index)}
+                aria-expanded={openIndex === index}
               >
                 <span>{faq.question}</span>
                 <svg
-                  className={`${styles.chevron} ${open === i ? styles.chevronUp : ''}`}
-                  viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"
+                  className={`${styles.chevron} ${openIndex === index ? styles.chevronUp : ''}`}
+                  viewBox="0 0 24 24" 
+                  fill="none" 
+                  stroke="currentColor" 
+                  strokeWidth="2"
+                  
                 >
                   <polyline points="6 9 12 15 18 9"/>
                 </svg>
               </button>
-              {open === i && (
+
+              {openIndex === index && (
                 <div className={styles.answer}>
                   <p>{faq.answer}</p>
                 </div>

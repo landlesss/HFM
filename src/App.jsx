@@ -1,12 +1,14 @@
 import { Routes, Route } from 'react-router-dom'
 import { LanguageProvider } from './context/LanguageContext'
-import Header from './components/Header/Header'
+// import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
 import Hero from './components/Hero/Hero'
 import Features from './components/Features/Features'
 import Prizes from './components/Prizes/Prizes'
 import Winners from './components/Winners/Winners'
 import FAQ from './components/FAQ/FAQ'
+import Header from './components/Header/Header'
+
 import PlaceholderPage from './pages/PlaceholderPage'
 
 function LandingPage() {
@@ -25,6 +27,7 @@ export default function App() {
   return (
     <LanguageProvider>
       <Header />
+      
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/markets" element={<PlaceholderPage title="Markets" />} />
@@ -33,6 +36,7 @@ export default function App() {
         <Route path="/tools-education" element={<PlaceholderPage title="Tools & Education" />} />
         <Route path="/company" element={<PlaceholderPage title="Company" />} />
       </Routes>
+
       <Footer />
     </LanguageProvider>
   )

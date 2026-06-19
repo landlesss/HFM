@@ -45,7 +45,7 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  color: #eeeeee;
+  color: #EEEEEE;
   font-size: 14px;
   font-weight: 400;
   line-height: 26px;
@@ -66,7 +66,7 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  color: #eeeeee;
+  color: #EEEEEE;
   font-size: 14px;
   font-weight: 400;
   line-height: 26px;
@@ -141,7 +141,7 @@
   cursor: pointer;
   font-family: 'Open Sans', sans-serif;
   font-size: 13px;
-  color: #eeeeee;
+  color: #EEEEEE;
   text-align: left;
   transition: background 0.15s, border-color 0.15s;
 }
@@ -211,7 +211,7 @@
 /* line-height: 2 → 20px box height; with gap 16 + logo 48 = 84px = navRow content ✓ */
 .brand {
   font-size: 10px;
-  color: #a8a8a8;
+  color: #A8A8A8;
   font-weight: 400;
   line-height: 2;
   white-space: nowrap;
@@ -238,7 +238,7 @@
   align-items: center;
   font-size: 16px;
   line-height: 26px;
-  color: #eeeeee;
+  color: #EEEEEE;
   font-weight: 400;
   white-space: nowrap;
   padding: 2px 10px;
@@ -265,11 +265,11 @@
 }
 
 .loginBtn {
-  border: 1px solid #cd0511;
+  border: 1px solid #CD0511;
   border-radius: 4px;
   font-size: 16px;
   font-weight: 400;
-  color: #eeeeee;
+  color: #EEEEEE;
   font-family: 'Open Sans', sans-serif;
   padding: 0 16px;
   height: 35px;

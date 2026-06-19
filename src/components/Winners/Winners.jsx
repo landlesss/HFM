@@ -29,6 +29,7 @@ export default function Winners() {
   return (
     <section className={styles.section}>
       <div className={styles.inner}>
+
         <h2 className={styles.title}>{t.winners.title}</h2>
 
         <div className={styles.grid}>
@@ -36,6 +37,7 @@ export default function Winners() {
             {winners.map((w) => (
               <div key={w.place} className={styles.winnerCard}>
                 <img src={w.trophy} alt="" className={styles.trophyImg} />
+                
                 <div className={styles.info}>
                   <div className={styles.placeLabel}>
                     {t.winners.january.toUpperCase()} {w.place}<sup>{w.suffix}</sup> {t.winners.winner.toUpperCase()}
@@ -46,6 +48,7 @@ export default function Winners() {
                     {t.winners.totalGain} <span className={styles.gainValue}>{w.gain}</span>
                   </div>
                 </div>
+
                 <div className={styles.ribbon}>
                   <span className={styles.ribbonPrice}>{w.prize}</span>
                 </div>
@@ -55,6 +58,7 @@ export default function Winners() {
 
           <div className={styles.leaderCol}>
             <h3 className={styles.leaderTitle}>{t.winners.leaderTitle}</h3>
+            
             <table className={styles.table}>
               <thead>
                 <tr>
@@ -71,14 +75,18 @@ export default function Winners() {
                 ))}
               </tbody>
             </table>
+            
             <p className={styles.tableNote}>{t.winners.tableNote}</p>
           </div>
         </div>
 
         <div className={styles.btnWrap}>
-          <a href="#hero-form" className={styles.joinBtn}>{t.winners.joinNow}</a>
+          <a href="#hero-form" className={styles.joinBtn}>
+            {t.winners.joinNow}
+          </a>
           <p className={styles.small}>{t.winners.termsApply}</p>
         </div>
+
       </div>
     </section>
   )

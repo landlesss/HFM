@@ -20,8 +20,9 @@
 
 .titleLine {
   width: 60px;
+  /* background: red; */
   height: 3px;
-  background: #cd0511;
+  background: #CD0511;
   margin: 0 auto 60px;
 }
 
@@ -73,17 +74,21 @@
   display: block;
 }
 
+
+
+
 @media (max-width: 1024px) {
   .grid {
     grid-template-columns: 160px 1fr 160px;
     gap: 30px;
   }
-
+  
   .col {
     gap: 60px;
   }
 }
 
+/*  */
 @media (max-width: 768px) {
   .grid {
     grid-template-columns: 1fr 1fr;

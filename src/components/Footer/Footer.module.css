@@ -10,7 +10,7 @@
   display: grid;
   grid-template-columns: 310px 1fr;
   gap: 48px;
-  align-items: start;
+  align-items: end;
 }
 
 .leftCol {
@@ -23,7 +23,7 @@
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   font-weight: 700;
-  color: #eeeeee;
+  color: #EEEEEE;
   line-height: 26px;
 }
 
@@ -74,15 +74,13 @@
   width: auto;
 }
 
-.rightCol {
-  padding-top: 4px;
-}
+.rightCol {}
 
 .riskTitle {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   font-weight: 700;
-  color: #eeeeee;
+  color: #EEEEEE;
   line-height: 26px;
   margin-bottom: 55px;
 }
@@ -93,6 +91,9 @@
   line-height: 14px;
   color: #999;
 }
+
+
+
 
 @media (max-width: 1200px) {
   .inner {
