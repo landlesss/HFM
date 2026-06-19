@@ -219,7 +219,7 @@
 .nav {
   flex: 1;
   min-width: 0;
-  margin-top: 46px; /* 25px navRow padding + 46 = 71px from header top */
+  margin-top: 46px; 
 }
 
 .navLinks {
