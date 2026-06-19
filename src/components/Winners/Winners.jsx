@@ -76,7 +76,7 @@ export default function Winners() {
         </div>
 
         <div className={styles.btnWrap}>
-          <a href="#" className={styles.joinBtn}>{t.winners.joinNow}</a>
+          <a href="#hero-form" className={styles.joinBtn}>{t.winners.joinNow}</a>
           <p className={styles.small}>{t.winners.termsApply}</p>
         </div>
       </div>

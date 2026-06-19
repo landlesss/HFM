@@ -85,10 +85,14 @@ export default function Header() {
 
         <div className={styles.navRow}>
           <div className={styles.logoWrap}>
-            <NavLink to="/" className={styles.logo}>
+            <span className={styles.brand}>{t.header.brand}</span>
+            <NavLink
+              to="/"
+              className={styles.logo}
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            >
               <img src={logoSrc} alt="HFM" className={styles.logoImg} />
             </NavLink>
-            <span className={styles.brand}>{t.header.brand}</span>
           </div>
           <nav className={styles.nav}>
             <ul className={styles.navLinks}>

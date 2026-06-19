@@ -13,24 +13,23 @@
 .inner {
   max-width: 1320px;
   margin: 0 auto;
-  padding: 14px 24px 12px;
+  padding: 0 24px;
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  position: relative;
 }
 
-/* ── Top row ── */
+/* ── Top row — absolutely anchored to top-right ── */
 .topRow {
+  position: absolute;
+  top: 14px;
+  right: 0;
   display: flex;
-  justify-content: flex-end;
   align-items: center;
 }
 
 .topRight {
   display: flex;
   align-items: center;
-  gap: 0;
 }
 
 .divider {
@@ -177,18 +176,26 @@
 }
 
 /* ── Nav row ── */
+/* padding-top:25 anchors brand text; align-items:flex-start lets nav/navActions
+   use margin-top:46 so their top sits at 25+46=71px from header (spec: 71/35) */
 .navRow {
+  height: 100%;
+  box-sizing: border-box;
+  padding-top: 25px;
+  padding-bottom: 23px;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 24px;
 }
 
+/* Stretches to navRow content height (84px) so brand sits at top, logo at bottom */
 .logoWrap {
   flex-shrink: 0;
+  align-self: stretch;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 3px;
+  gap: 16px;
 }
 
 .logo {
@@ -201,11 +208,12 @@
   width: auto;
 }
 
+/* line-height: 2 → 20px box height; with gap 16 + logo 48 = 84px = navRow content ✓ */
 .brand {
   font-size: 10px;
   color: #a8a8a8;
   font-weight: 400;
-  line-height: 1;
+  line-height: 2;
   white-space: nowrap;
 }
 
@@ -213,6 +221,7 @@
 .nav {
   flex: 1;
   min-width: 0;
+  margin-top: 46px; /* 25px navRow padding + 46 = 71px from header top */
 }
 
 .navLinks {
@@ -252,6 +261,7 @@
   align-items: center;
   gap: 10px;
   flex-shrink: 0;
+  margin-top: 46px; /* same vertical anchor as .nav */
 }
 
 .loginBtn {
@@ -261,11 +271,12 @@
   font-weight: 400;
   color: #eeeeee;
   font-family: 'Open Sans', sans-serif;
-  width: 81px;
+  padding: 0 16px;
   height: 35px;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
+  white-space: nowrap;
   transition: background 0.2s;
 }
 
@@ -280,11 +291,12 @@
   font-size: 16px;
   font-weight: 400;
   font-family: 'Open Sans', sans-serif;
-  width: 111px;
+  padding: 0 16px;
   height: 35px;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
+  white-space: nowrap;
   transition: background 0.2s;
 }
 
@@ -311,13 +323,17 @@
     height: 80px;
   }
 
-  .inner {
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
-
   .topRow {
     display: none;
+  }
+
+  .navRow {
+    padding-top: 16px;
+    padding-bottom: 14px;
+  }
+
+  .logoWrap {
+    gap: 8px;
   }
 
   .loginBtn {

@@ -11,7 +11,7 @@ export default function Hero() {
           <h1 className={styles.titleGold}>LOREM IPSUM DOLOR</h1>
           <h1 className={styles.titleWhite}>SIT AMET TOSIK</h1>
         </div>
-        <div className={styles.formCard}>
+        <div id="hero-form" className={styles.formCard}>
           <HeroForm />
         </div>
       </div>
