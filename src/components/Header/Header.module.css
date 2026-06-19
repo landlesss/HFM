@@ -18,7 +18,6 @@
   position: relative;
 }
 
-/* ── Top row — absolutely anchored to top-right ── */
 .topRow {
   position: absolute;
   top: 14px;
@@ -40,7 +39,6 @@
   flex-shrink: 0;
 }
 
-/* Download App — bordered box, no underline animation */
 .downloadApp {
   display: inline-flex;
   align-items: center;
@@ -61,7 +59,8 @@
   border-color: #ccc;
 }
 
-/* Shared top-row link style */
+
+
 .topLink {
   display: inline-flex;
   align-items: center;
@@ -88,7 +87,6 @@
   flex-shrink: 0;
 }
 
-/* ── Language selector ── */
 .langSelector {
   position: relative;
 }
@@ -164,6 +162,8 @@
   flex-shrink: 0;
 }
 
+
+
 .langOptionCode {
   font-weight: 600;
   font-size: 12px;
@@ -175,9 +175,8 @@
   font-size: 12px;
 }
 
-/* ── Nav row ── */
-/* padding-top:25 anchors brand text; align-items:flex-start lets nav/navActions
-   use margin-top:46 so their top sits at 25+46=71px from header (spec: 71/35) */
+
+
 .navRow {
   height: 100%;
   box-sizing: border-box;
@@ -188,7 +187,8 @@
   gap: 24px;
 }
 
-/* Stretches to navRow content height (84px) so brand sits at top, logo at bottom */
+
+
 .logoWrap {
   flex-shrink: 0;
   align-self: stretch;
@@ -208,7 +208,6 @@
   width: auto;
 }
 
-/* line-height: 2 → 20px box height; with gap 16 + logo 48 = 84px = navRow content ✓ */
 .brand {
   font-size: 10px;
   color: #A8A8A8;
@@ -217,7 +216,6 @@
   white-space: nowrap;
 }
 
-/* nav element expands to push navActions right */
 .nav {
   flex: 1;
   min-width: 0;
@@ -261,10 +259,12 @@
   align-items: center;
   gap: 10px;
   flex-shrink: 0;
-  margin-top: 46px; /* same vertical anchor as .nav */
+  margin-top: 46px; 
 }
 
 .loginBtn {
+  /* border: red; */
+
   border: 1px solid #CD0511;
   border-radius: 4px;
   font-size: 16px;
@@ -304,7 +304,8 @@
   background: #136e3a;
 }
 
-/* ── Responsive ── */
+
+
 @media (max-width: 1200px) {
   .navLink {
     font-size: 14px;

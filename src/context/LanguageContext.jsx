@@ -15,6 +15,6 @@ export function LanguageProvider({ children }) {
 
 export function useLang() {
   const ctx = useContext(LanguageContext)
-  if (!ctx) throw new Error('useLang must be used within <LanguageProvider>')
+  if (!ctx) throw new Error('ERRRRRRR')
   return ctx
 }

@@ -51,8 +51,8 @@
   color: #fff;
 }
 
-/* Form card — margin-bottom:-80px makes form hang 20px below hero's dark bg
-   (hero padding-bottom:60 − 80 negative = hero ends 20px before form card) */
+/*  */
+
 .formCard {
   background: #fff;
   border-radius: 10px;
@@ -200,9 +200,12 @@
   align-self: center;
 }
 
+
 .submitBtn:hover {
   background: #136e3a;
 }
+
+
 
 @media (max-width: 600px) {
   .formCard {

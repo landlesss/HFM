@@ -26,6 +26,7 @@ export default function Prizes() {
             </div>
           ))}
         </div>
+        
         <div className={styles.btnWrap}>
           <a href="#hero-form" className={styles.joinBtn}>{t.prizes.joinNow}</a>
           <p className={styles.small}>{t.prizes.termsApply}</p>

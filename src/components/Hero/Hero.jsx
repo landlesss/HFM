@@ -3,6 +3,7 @@ import bgSrc from '../../assets/bg.jpg'
 import styles from './Hero.module.css'
 
 export default function Hero() {
+  
   return (
     <section className={styles.hero} style={{ backgroundImage: `url(${bgSrc})` }}>
       <div className={styles.overlay} />
