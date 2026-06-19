@@ -1,0 +1,213 @@
+.hero {
+  position: relative;
+  min-height: 560px;
+  background: #0f1923 center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  padding: 60px 20px;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(5, 10, 20, 0.42);
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  max-width: 1320px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+.titleBlock {
+  text-align: center;
+  line-height: 70px;
+}
+
+.titleGold {
+  font-family: 'Sofia Sans Condensed', sans-serif;
+  font-size: clamp(36px, 5vw, 70px);
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #fcd678 0%, #bc8c2f 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.titleWhite {
+  font-family: 'Sofia Sans Condensed', sans-serif;
+  font-size: clamp(36px, 5vw, 70px);
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+/* Form card */
+.formCard {
+  background: #fff;
+  border-radius: 10px;
+  padding: 40px;
+  width: 100%;
+  max-width: 694px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.formTitle {
+  font-size: 24px;
+  font-weight: 700;
+  color: #000;
+  text-align: center;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.codePhoneRow {
+  display: grid;
+  grid-template-columns: 73px 1fr;
+  gap: 10px;
+}
+
+.codeField,
+.phoneField {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #999;
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+  color: #333;
+  outline: none;
+  transition: border-color 0.2s;
+  background: #fff;
+  height: 42px;
+}
+
+.input::placeholder {
+  color: #999;
+}
+
+.input:focus {
+  border-color: #179149;
+}
+
+.inputError {
+  border-color: #e74c3c;
+}
+
+.select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23999' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  padding-right: 32px;
+  cursor: pointer;
+}
+
+.error {
+  font-size: 11px;
+  color: #e74c3c;
+}
+
+.checkboxRow {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 12px;
+  color: #999;
+  cursor: pointer;
+}
+
+.checkboxLabel input[type='checkbox'] {
+  margin-top: 1px;
+  flex-shrink: 0;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #999;
+  border-radius: 2px;
+  accent-color: #179149;
+}
+
+.link {
+  color: #cd0511;
+  text-decoration: underline;
+}
+
+.successMsg {
+  background: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+  border-radius: 4px;
+  padding: 10px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.submitBtn {
+  background: #179149;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 0;
+  height: 54px;
+  font-size: 18px;
+  font-weight: 400;
+  font-family: 'Open Sans', sans-serif;
+  transition: background 0.2s;
+  width: 100%;
+}
+
+.submitBtn:hover {
+  background: #136e3a;
+}
+
+@media (max-width: 600px) {
+  .formCard {
+    padding: 24px 16px;
+  }
+
+  .row {
+    grid-template-columns: 1fr;
+  }
+
+  .codePhoneRow {
+    grid-template-columns: 70px 1fr;
+  }
+}

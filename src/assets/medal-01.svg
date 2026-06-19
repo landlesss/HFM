@@ -1,0 +1,34 @@
+<svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M49.9999 98.5C62.5494 98.5 72.7229 88.3266 72.7229 75.777C72.7229 63.2274 62.5494 53.054 49.9999 53.054C37.4503 53.054 27.2769 63.2274 27.2769 75.777C27.2769 88.3266 37.4503 98.5 49.9999 98.5Z" stroke="url(#paint0_linear_2007_317)" stroke-miterlimit="10"/>
+<path d="M40.0957 55.33V44.709H59.9037V55.33" stroke="url(#paint1_linear_2007_317)" stroke-miterlimit="10"/>
+<path d="M59.9039 44.709L35.1449 1.5H15.3369L40.0959 44.709" stroke="url(#paint2_linear_2007_317)" stroke-miterlimit="10"/>
+<path d="M53.9927 21.307L64.8547 2.35001H84.6627L59.9037 45.559" stroke="url(#paint3_linear_2007_317)" stroke-miterlimit="10"/>
+<path d="M48.0691 69.629H48.0041L43.9921 71.537L43.1831 67.85L48.7491 65.262H52.8261V86.293H48.0691V69.629Z" fill="url(#paint4_linear_2007_317)"/>
+<defs>
+<linearGradient id="paint0_linear_2007_317" x1="27.2769" y1="98.5" x2="72.7229" y2="98.5" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FCD678"/>
+<stop offset="0.0001" stop-color="#FCD678"/>
+<stop offset="1" stop-color="#BC8C2F"/>
+</linearGradient>
+<linearGradient id="paint1_linear_2007_317" x1="40.0957" y1="55.33" x2="59.9037" y2="55.33" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FCD678"/>
+<stop offset="0.0001" stop-color="#FCD678"/>
+<stop offset="1" stop-color="#BC8C2F"/>
+</linearGradient>
+<linearGradient id="paint2_linear_2007_317" x1="15.3369" y1="44.709" x2="59.9039" y2="44.709" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FCD678"/>
+<stop offset="0.0001" stop-color="#FCD678"/>
+<stop offset="1" stop-color="#BC8C2F"/>
+</linearGradient>
+<linearGradient id="paint3_linear_2007_317" x1="53.9927" y1="45.559" x2="84.6627" y2="45.559" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FCD678"/>
+<stop offset="0.0001" stop-color="#FCD678"/>
+<stop offset="1" stop-color="#BC8C2F"/>
+</linearGradient>
+<linearGradient id="paint4_linear_2007_317" x1="43.1831" y1="86.293" x2="52.8261" y2="86.293" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FCD678"/>
+<stop offset="0.0001" stop-color="#FCD678"/>
+<stop offset="1" stop-color="#BC8C2F"/>
+</linearGradient>
+</defs>
+</svg>

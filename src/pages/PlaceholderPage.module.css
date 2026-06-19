@@ -1,0 +1,45 @@
+.page {
+  min-height: calc(100vh - 132px);
+  background: #f4f4f4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inner {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.title {
+  font-family: 'Sofia Sans Condensed', sans-serif;
+  font-size: clamp(36px, 5vw, 72px);
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #161616;
+  margin-bottom: 16px;
+}
+
+.subtitle {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #179149;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+
+.back:hover {
+  border-bottom-color: #179149;
+}
